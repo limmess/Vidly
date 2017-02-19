@@ -29,8 +29,9 @@ namespace Vidly.Models
         [Display(Name = "Release Date")]
         public DateTime ReleaseDate { get; set; }
 
-        
+        [Required(ErrorMessage = "Iveskite kieki")]
         [Display(Name = "Number In Stock")]
+        [Range(1,20,ErrorMessage = "Ribos yra 1-20")]
         public byte NumberInStock { get; set; }
     }
     
